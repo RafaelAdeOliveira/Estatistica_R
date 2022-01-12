@@ -1,0 +1,30 @@
+---
+Formação Cientista de Dados - Rafael Amaral de Oliveira
+Amostragem Sistematica
+---
+Instalando Biblioteca
+```{r}
+#install.packages("TeachingSampling")
+library("TeachingSampling")
+```
+Amostra Sistematica de tamanho 150, 10 grupos
+```{r}
+amostra = S.SY(150, 10)
+amostra
+```
+Tamanho
+```{r}
+dim(amostra)
+```
+Usando em iris
+```{r}
+amostraIris = iris[amostra,]
+```
+Verificando
+```{r}
+amostraIris
+```
+Tamanho
+```{r}
+dim(amostraIris)
+```
