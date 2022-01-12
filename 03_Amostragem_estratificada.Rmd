@@ -1,0 +1,39 @@
+---
+Formação Cientista de Dados - Rafael Amaral de Oliveira
+Amostragem Estratificada
+---
+Instalando Biblioteca
+```{r}
+#install.packages("sampling")
+library("sampling")
+```
+Proporção
+```{r}
+propocao = 25
+```
+Srswor amostra simples sem reposição, srswr com reposicao, poisson, systematic
+a ordem de size é que está no conjunto de dados
+```{r}
+amostraIris2 = strata(data = iris,
+                      stratanames = c("Species"), size = c(rep(propocao,3)), method = "srswor")
+```
+Resultado
+```{r}
+summary(amostraIris2)
+```
+Dados de infertilidade
+```{r}
+infert
+summary(infert)
+```
+Amostragem por estratos de education
+```{r}
+amostra = strata(data = infert,
+                 stratanames = c("education"), size = c(5,48,47), method = "srswor")
+```
+Resultado
+```{r}
+amostra
+summary(amostra)
+```
+
