@@ -1,0 +1,19 @@
+---
+Formação Cientista de Dados - Rafael Amaral de Oliveira
+Distribuição T de Student
+---
+Salário de cientistas de dados e de R$ 75,00 por hora. Amostra 9. S=10. Qual a 
+probabilidade de ser menor que R$ 80,00 por hora?
+t=1.5, graus de liberdade
+```{r}
+pt(1.5, 8)
+```
+Qual a probabilidade de ser maior que 80?
+```{r}
+pt(1.5, 8, lower.tail = FALSE)
+1 - pt(1.5, 8)
+```
+Somando as 2 caudas
+```{r}
+pt(1.5, 8) + pt(1.5, 8, lower.tail = F)
+```
