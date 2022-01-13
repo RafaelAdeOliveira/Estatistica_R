@@ -20,4 +20,5 @@ Se eu passar 4 sinais de quatro tempos cada. Qual a prob. de eu pegar 3 ou Mais 
 ```{r}
 pbinom(q=2,size = 4, prob = 0.25,lower.tail = F)
 dbinom(x=3, size = 4, prob = 0.25) + dbinom(x=4, size = 4, prob = 0.25)
+1 - pbinom(q=2,size = 4, prob = 0.25)
 ```
